@@ -1,0 +1,28 @@
+{% extends "util/base.html"%}
+
+{% block 'css-extras' %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css">
+{% endblock %}
+
+{% block 'header' %}
+<hgroup>	
+	<h1><img src="#FIXME" title="Spark Camp" alt="Spark Camp" /></h1>
+	<h2><img src="#FIXME" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" /></h2>
+</hgroup>
+{% endblock %}
+
+{% block 'main' %}
+	<article>
+		Conteúdo aqui
+	</article>
+
+	<form action="{% url spark_camp %}" method="post">
+		{% csrf_token %}
+		{{ form.as_ul }}
+		<input type="submit" value="Enviar" />
+	</form>
+{% endblock %}
+
+{% block 'footer' %}
+	footer
+{% endblock %}

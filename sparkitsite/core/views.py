@@ -6,7 +6,7 @@ from forms import SparkCampForm
 def index(request):
     return locals()
 
-@render_to('core/hotsite.html')
+@render_to('core/camp.html')
 def spark_camp(request):
     form = SparkCampForm(request.POST or None)
     if form.is_valid():
