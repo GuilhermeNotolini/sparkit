@@ -14,6 +14,7 @@ def spark_camp(request):
 	if form.is_valid():
 		TO_EMAIL = ['contato@sparkit.com.br']
 
+		nome 			= form.cleaned_data['nome_projeto']
 		nome_projeto 	= form.cleaned_data['nome_projeto']
 		url_projeto 	= form.cleaned_data['url_projeto']
 		desc_projeto 	= form.cleaned_data['desc_projeto']

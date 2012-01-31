@@ -69,7 +69,7 @@ if ON_HEROKU:
 MEDIA_ROOT = LOCAL('media')
 MEDIA_URL = '/media/'
 
-#STATIC_ROOT = LOCAL('static_root')
+STATIC_ROOT = LOCAL('static_root')
 STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
