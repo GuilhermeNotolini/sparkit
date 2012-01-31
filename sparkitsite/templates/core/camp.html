@@ -5,22 +5,30 @@
 {% endblock %}
 
 {% block 'header' %}
-<hgroup>	
-	<h1><img src="#FIXME" title="Spark Camp" alt="Spark Camp" /></h1>
-	<h2><img src="#FIXME" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" /></h2>
-</hgroup>
+	<img id="flame" src="{{ STATIC_URL}}images/spark.png" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" />
+	<div>
+		<h1><img src="{{ STATIC_URL}}images/sparkcamp.png" title="Spark Camp" alt="Spark Camp" /></h1>
+		<h2>Da idéia a web em 1 dia.</h2>
+		<h3>De graça.</h3>
+		<p>Você tem uma idéia e deseja gatilho para lançá-la na web?<br/>
+		Inscreva agora a sua idéia e se ela for selecionada, desenvolveremos ela para você, de graça! Increva-se agora!
+		</p>
+	</div>
 {% endblock %}
 
 {% block 'main' %}
 	<article>
 		Conteúdo aqui
 	</article>
-
+	{% if ENVIADO %}
+	<p>énós</p>
+	{% else %}
 	<form action="{% url spark_camp %}" method="post">
 		{% csrf_token %}
 		{{ form.as_ul }}
 		<input type="submit" value="Enviar" />
 	</form>
+	{% endif %}
 {% endblock %}
 
 {% block 'footer' %}
