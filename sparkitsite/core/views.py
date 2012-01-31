@@ -10,8 +10,9 @@ def index(request):
 @render_to('core/camp.html')
 def spark_camp(request):
 	form = SparkCampForm(request.POST or None)
+	ENVIADO = False
 	if form.is_valid():
-		TO_EMAIL = ['victor@sparkit.com.br']
+		TO_EMAIL = ['contato@sparkit.com.br']
 
 		nome_projeto 	= form.cleaned_data['nome_projeto']
 		url_projeto 	= form.cleaned_data['url_projeto']
@@ -21,5 +22,5 @@ def spark_camp(request):
 		celular 		= form.cleaned_data['celular']
 
 		send_templated_email(TO_EMAIL, 'emails/spark-campus', locals())
-
+		ENVIADO = True
 	return locals()
