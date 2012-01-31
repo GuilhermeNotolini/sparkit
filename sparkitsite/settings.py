@@ -34,6 +34,15 @@ USE_L10N = True
 
 SITE_ID = 1
 
+ON_HEROKU = os.environ.has_key('DATABASE_URL')
+
+#if ON_HEROKU:
+#    from libs.configs.env_heroku import * 
+#else:
+#    from libs.configs.env_dev import * 
+
+
+
 MEDIA_ROOT = LOCAL('media')
 MEDIA_URL = '/media/'
 
