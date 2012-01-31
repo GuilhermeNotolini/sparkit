@@ -1,4 +1,9 @@
-#coding: utf-8
+# -*- coding: utf-8 -*-
+import os 
+
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+LOCAL = lambda x: os.path.join(SITE_ROOT, x)
+
 SECRET_KEY = '!y21_@+av*=)@**%f9_8m42dyvhm1a0r2%_^(53c2^tm%qqd8i'
 
 DEBUG = True
@@ -12,7 +17,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite',
+        'NAME': LOCAL('db.sqlite'),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -29,14 +34,15 @@ USE_L10N = True
 
 SITE_ID = 1
 
-MEDIA_ROOT = ''
-MEDIA_URL = ''
+MEDIA_ROOT = LOCAL('media')
+MEDIA_URL = '/media/'
 
-STATIC_ROOT = ''
+STATIC_ROOT = LOCAL('static_root')
 STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
+    LOCAL('static')
 )
 
 STATICFILES_FINDERS = (
@@ -64,11 +70,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'sparkitsite.urls'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
+TEMPLATE_DIRS = (LOCAL('templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -78,6 +80,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'core',
 )
 
 
