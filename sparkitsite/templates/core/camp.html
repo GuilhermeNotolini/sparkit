@@ -9,15 +9,17 @@
 	<img id="flame" src="{{ STATIC_URL}}images/spark.png" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" />
 	<div>
 		<h1><img src="{{ STATIC_URL}}images/sparkcamp.png" title="Spark Camp" alt="Spark Camp" /></h1>
-		<h2>Da idéia a web em 1 dia.</h2>
+		<h2>Da ideia a web em 1 dia.</h2>
 		<h3>De graça.</h3>
-		<p>Você tem uma idéia e deseja gatilho para lançá-la na web?<br/>
-		Inscreva agora a sua idéia e se ela for selecionada, desenvolveremos ela para você, de graça! Increva-se agora!
+		<p>Você tem uma ideia e precisa de ajuda para lançá-la?<br/>
+		Precisa acender o seu espírito empreendedor?<br/><br/>
+		A SparkIT fará o desenvolvimento da sua ideia durante a Campus Party, em um dia e de graça!
 		</p>
 	</div>
 {% endblock %}
 
 {% block 'main' %}
+	<p id="call">Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!</p>
 	{% if ENVIADO %}
 	<p>énós</p>
 	{% else %}
@@ -43,8 +45,19 @@
 		</ul>
 	</form>
 	{% endif %}
+	<div id="projects">
+		<p>3 ideias desenvolvidas em 3 dias de Campus Party. <span>De graça.</span></p>
+		<div>
+			<ul>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>08/02</span></li>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>10/02</span></li>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>11/02</span></li>
+			</ul>
+		</div>
+		<p>Uma dessas 3 ideias pode ser sua!</p>
+	</div>
 {% endblock %}
 
 {% block 'footer' %}
-	footer
+	<img src="{{ STATIC_URL}}images/sparkit.png" />
 {% endblock %}
