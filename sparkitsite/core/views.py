@@ -9,10 +9,10 @@ def index(request):
 
 @render_to('core/camp.html')
 def spark_camp(request):
-    form = SparkCampForm(request.POST or None)
-    if form.is_valid():
-    	TO_EMAIL = ['victor@sparkit.com.br']
-		
+	form = SparkCampForm(request.POST or None)
+	if form.is_valid():
+		TO_EMAIL = ['victor@sparkit.com.br']
+
 		nome_projeto 	= form.cleaned_data['nome_projeto']
 		url_projeto 	= form.cleaned_data['url_projeto']
 		desc_projeto 	= form.cleaned_data['desc_projeto']
