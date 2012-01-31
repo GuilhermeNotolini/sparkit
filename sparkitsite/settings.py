@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import os 
+import os
+from S3 import CallingFormat
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 LOCAL = lambda x: os.path.join(SITE_ROOT, x)
@@ -37,6 +38,20 @@ SITE_ID = 1
 ON_HEROKU = os.environ.has_key('DATABASE_URL')
 
 if ON_HEROKU:
+    AWS_ACCESS_KEY_ID = 'AKIAJ6C7XWK5CTIAMC7A'
+    AWS_SECRET_ACCESS_KEY = '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'
+    S3_FILE_STORAGE = 'storages.backends.s3.S3Storage'
+    AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
+    AWS_S3_SECURE_URLS = True
+    STATICFILES_STORAGE = S3_FILE_STORAGE
+    DEFAULT_FILE_STORAGE = S3_FILE_STORAGE
+
+    AWS_STORAGE_BUCKET_NAME = 'site-sparkit'
+
+    STATIC_ROOT = ''
+    STATIC_URL = 'https://s3-sa-east-1.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' #EMAIL_BACKEND = 'django_mailer.smtp_queue.EmailBackend'
     EMAIL_HOST = 'smtp.sendgrid.net'
     EMAIL_PORT = 587
