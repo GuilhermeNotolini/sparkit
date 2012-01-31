@@ -46,18 +46,18 @@ ON_HEROKU = os.environ.has_key('DATABASE_URL')
 MEDIA_ROOT = LOCAL('media')
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = LOCAL('static_root')
+#STATIC_ROOT = LOCAL('static_root')
 STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_DIRS = (
-    LOCAL('static')
+    LOCAL('static'),
 )
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 
@@ -67,6 +67,19 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
+)
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    # default template context processors
+    'django.core.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    
+    # required by django-admin-tools
+    'django.core.context_processors.request',
 )
 
 MIDDLEWARE_CLASSES = (
