@@ -2,6 +2,7 @@
 from django import forms
 
 class SparkCampForm(forms.Form):
+	nome 			= forms.CharField(max_length=256)
 	nome_projeto 	= forms.CharField(max_length=256)
 	url_projeto 	= forms.CharField(max_length=256, required=False)
 	desc_projeto 	= forms.CharField(widget=forms.Textarea)

@@ -1,4 +1,5 @@
 - {{nome_projeto}}
+- {{nome}}
 - {{url_projeto}}
 
 - {{email}}
