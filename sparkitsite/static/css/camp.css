@@ -90,7 +90,8 @@ h3 {
 form {
   display: block;
   margin: 0 auto;
-  width: 730px; }
+  width: 730px;
+  padding: 40px 0; }
   form li {
     list-style: none; }
 

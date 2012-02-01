@@ -1,14 +1,19 @@
 {% extends "util/base.html"%}
 
-{% block title %}SparkIT{% endblock %}
-{% block description %}{% endblock %}
-{% block author %}{% endblock %}
+{% block title %}SparkIT - da ideia à web em 1 dia - desenvolvimento de 3 produtos em 3 dias na Campus Party, de graça.{% endblock %}
+{% block description %}Você tem uma ideia e precisa de ajuda para lançá-la? Precisa acender o seu espírito empreendedor? A SparkIT fará o desenvolvimento da sua ideia durante a Campus Party, em um dia e de graça! Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!{% endblock %}
+{% block 'meta-autor' %}sparkit.com.br{% endblock %}
 {% block analytics %}UA-25096853-1{% endblock %}
 
 {% block 'css-extras' %}
 	{{ block.super }}
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css">
 {% endblock %}
+
+{% block 'favicon' %}
+	<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+  	<link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
+ {% endblock %}
 
 {% block 'header' %}
 	<ul id="social">
@@ -89,13 +94,3 @@
 {% block 'footer' %}
 	<img src="{{ STATIC_URL}}images/sparkit.png" />
 {% endblock %}
-
-<span itemprop="name">Spark camp! Da ideia à web em 1 dia. De graça.</span>
-<span itemprop="description">Você tem uma ideia e precisa de ajuda para lançá-la?
-
-Precisa acender o seu espírito empreendedor?
-
-A SparkIT fará o desenvolvimento da sua ideia durante a Campus Party, em um dia e de graça!
-
-Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!</span>
-<img itemprop="image" src="http://sparkit.com.br/camp/static/images/sparkcamp.png">
