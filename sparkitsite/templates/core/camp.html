@@ -21,7 +21,8 @@
 {% block 'main' %}
 	<p id="call">Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!</p>
 	{% if ENVIADO %}
-	<p>énós</p>
+	<p class="sent red">Sua ideia foi enviada com sucesso.</p>
+	<p class="sent">Aguarde, dia 07/02 às 18:00h, anunciaremos os escolhidos.</p>
 	{% else %}
 	<form action="{% url spark_camp %}" method="post">
 		{% csrf_token %}
@@ -45,6 +46,7 @@
 		</ul>
 	</form>
 	{% endif %}
+
 	<div id="projects">
 		<p>3 ideias desenvolvidas em 3 dias de Campus Party. <span>De graça.</span></p>
 		<div>

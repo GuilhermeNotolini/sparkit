@@ -22,16 +22,17 @@ body {
 header {
   margin: 80px auto 0;
   text-align: right;
-  width: 980px; }
-
-header #flame {
-  float: left;
-  margin: 0 0 0 60px; }
-
-header div {
-  width: 550px;
-  float: right;
-  text-shadow: 0px 3px 5px black; }
+  width: 900px; }
+  header #flame {
+    float: left; }
+  header div {
+    width: 550px;
+    float: right;
+    text-shadow: 0px 3px 5px black; }
+  header p {
+    float: right;
+    width: 480px;
+    font-size: 20px; }
 
 h1 {
   float: right;
@@ -52,15 +53,10 @@ h3 {
   font-size: 50px;
   margin: 20px 0 40px; }
 
-p {
-  float: right;
-  width: 480px;
-  font-size: 20px; }
-
 /******************* main ******************* */
 #main {
   clear: both;
-  padding: 40px 0 80px; }
+  padding: 60px 0 80px; }
   #main #call {
     margin: 0 auto 50px;
     width: 800px;
@@ -68,14 +64,24 @@ p {
     text-shadow: 0px 3px 5px black;
     text-align: center;
     float: none; }
+  #main .sent {
+    margin: 20px auto 80px;
+    width: 900px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 3px 5px black;
+    text-align: center; }
+  #main .red {
+    color: #f01d23;
+    margin: 80px auto 0;
+    font-size: 50px; }
 
 form {
   display: block;
   margin: 0 auto;
   width: 730px; }
-
-form li {
-  list-style: none; }
+  form li {
+    list-style: none; }
 
 input[type="text"], input[type="email"], textarea {
   background: #303030;
@@ -106,9 +112,6 @@ input[type="text"], input[type="email"], textarea {
   font-size: 16px;
   float: left; }
 
-textarea {
-  height: 120px; }
-
 input#id_nome_projeto {
   width: 325px;
   margin: 0 20px 0 0; }
@@ -126,6 +129,9 @@ input#id_email {
 
 input#id_celular {
   width: 198px; }
+
+textarea {
+  height: 120px; }
 
 input[type="submit"] {
   color: white;
@@ -160,55 +166,53 @@ input[type="submit"] {
   display: block;
   width: 100%;
   margin: 40px 0; }
-
-#projects p {
-  padding: 20px 0 20px;
-  text-align: center;
-  width: 100%;
-  text-shadow: 0px 3px 5px black;
-  font-size: 32px; }
-  #projects p span {
-    color: #f01d23; }
-
-#projects div {
-  background: #2c2c2c;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2c2c2c), color-stop(50%, #333333), color-stop(100%, #2c2c2c));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c2c2c', endColorstr='#2c2c2c',GradientType=0 );
-  /* IE6-9 */
-  clear: both;
-  border-top: 1px solid #7a7a7a;
-  border-bottom: 1px solid #161616; }
-  #projects div ul {
-    margin: 20px auto;
-    width: 800px;
-    lyst-style: none; }
-    #projects div ul li {
-      display: inline-block;
-      margin: 0 74px;
-      text-align: center;
-      width: 115px; }
-      #projects div ul li img {
-        margin: 0 0 10px; }
-      #projects div ul li span {
-        color: white;
-        text-shadow: 0px 3px 5px black;
-        font-size: 18px; }
+  #projects p {
+    padding: 20px 0 20px;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0px 3px 5px black;
+    font-size: 32px; }
+    #projects p span {
+      color: #f01d23; }
+  #projects div {
+    background: #2c2c2c;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2c2c2c), color-stop(50%, #333333), color-stop(100%, #2c2c2c));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c2c2c', endColorstr='#2c2c2c',GradientType=0 );
+    /* IE6-9 */
+    clear: both;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #161616; }
+    #projects div ul {
+      margin: 20px auto;
+      width: 800px;
+      lyst-style: none; }
+      #projects div ul li {
+        display: inline-block;
+        margin: 0 74px;
+        text-align: center;
+        width: 115px; }
+        #projects div ul li img {
+          margin: 0 0 10px; }
+        #projects div ul li span {
+          color: white;
+          text-shadow: 0px 3px 5px black;
+          font-size: 18px; }
 
 /******************* footer ******************* */
 footer {
-  margin: 60px auto 40px;
+  margin: 40px auto;
   width: 622px; }
 
 /******************* @font-face ******************* */
