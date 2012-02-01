@@ -3,7 +3,7 @@ from annoying.decorators import render_to
 from templated_emails.utils import send_templated_email
 from forms import SparkCampForm
 
-@render_to('core/index.html')
+@render_to('index.html')
 def index(request):
     return locals()
 
