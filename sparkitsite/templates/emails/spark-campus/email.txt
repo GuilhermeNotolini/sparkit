@@ -2,7 +2,7 @@
 - {{nome}}
 - {{url_projeto}}
 
-- {{email}}
+- {{email_2}}
 - {{celular}}
 
 
