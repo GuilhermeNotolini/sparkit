@@ -63,10 +63,10 @@
 				<input id="id_url_projeto" class="half" type="text" name="url_projeto" maxlength="256" {%if form.url_projeto.value %}value="{{form.url_projeto.value}}"{%endif%} placeholder="Site do projeto" />
 			</li>
 			<li>
-				<textarea id="id_desc_projeto" rows="10" cols="40" name="desc_projeto" placeholder="Descrição do produto" value="{{form.desc_projeto.value}}"></textarea>
+				<textarea id="id_desc_projeto" rows="10" cols="40" name="desc_projeto" placeholder="Descrição do produto [ O que é? O que você já fez? 'Nada é uma resposta válida! ]" value="{{form.desc_projeto.value}}"></textarea>
 			</li>
 			<li>
-				<textarea id="id_time" rows="10" cols="40" name="time" placeholder="Descrição do seu time" value="{{form.time.value}}"></textarea>
+				<textarea id="id_time" rows="10" cols="40" name="time" placeholder="Descrição do time [ O seu time pode ser só você! ]" value="{{form.time.value}}"></textarea>
 			</li>
 			<li>
 				<input type="text" name="nome" id="id_nome" placeholder="Nome" {%if form.nome.value %}value="{{form.nome.value}}"{%endif%} />
