@@ -10,6 +10,50 @@
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css">
 {% endblock %}
 
+{% block 'js-extras' %}
+	{{ block.super }}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		try {
+			jsToggle();
+		} catch (jsToggleE){
+
+		}
+	});
+
+	function jsToggle(){    
+		if(!supports_input_placeholder()){
+			$(".jsToggle").focus(function(){
+				if($(this).val() == $(this).attr("placeholder")){
+					$(this).attr("value","");
+					$(this).css('color','');
+				}
+			}).blur(function(){
+				if($(this).val() == ""){
+					$(this).attr("value",$(this).attr("placeholder"));
+					$(this).css('color','#c3c3c3');
+				}
+			});
+
+			$(".jsToggle").each(function(){
+				if($(this).val() == ""){
+				    $(this).val($(this).attr("placeholder"));
+				    $(this).css('color','#c3c3c3');
+				}
+			});
+		}
+	}
+
+	function supports_input_placeholder() {
+	  var i = document.createElement('input');
+	  return 'placeholder' in i;
+	}
+
+	</script>
+{% endblock %}
+
 {% block 'favicon' %}
 	<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
   	<link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
@@ -59,19 +103,19 @@
 		{% csrf_token %}
 		<ul>
 			<li>
-				<input id="id_nome_projeto" class="half" type="text" name="nome_projeto" maxlength="256" {%if form.nome_projeto.value %}value="{{form.nome_projeto.value}}"{%endif%}  placeholder="Nome do projeto"/>
-				<input id="id_url_projeto" class="half" type="text" name="url_projeto" maxlength="256" {%if form.url_projeto.value %}value="{{form.url_projeto.value}}"{%endif%} placeholder="Site do projeto [ se houver ]" />
+				<input id="id_nome_projeto" class="half jsToggle" type="text" name="nome_projeto" maxlength="256" {%if form.nome_projeto.value %}value="{{form.nome_projeto.value}}"{%endif%}  placeholder="Nome do projeto"/>
+				<input id="id_url_projeto" class="half jsToggle" type="text" name="url_projeto" maxlength="256" {%if form.url_projeto.value %}value="{{form.url_projeto.value}}"{%endif%} placeholder="Site do projeto [ se houver ]" />
 			</li>
 			<li>
-				<textarea id="id_desc_projeto" rows="10" cols="40" name="desc_projeto" placeholder="Descrição do produto [ O que é? O que você já fez? 'Nada' é uma resposta válida! ]" value="{{form.desc_projeto.value}}"></textarea>
+				<textarea id="id_desc_projeto" class="jsToggle" rows="10" cols="40" name="desc_projeto" placeholder="Descrição do produto [ O que é? O que você já fez? 'Nada' é uma resposta válida! ]" value="{{form.desc_projeto.value}}"></textarea>
 			</li>
 			<li>
-				<textarea id="id_time" rows="10" cols="40" name="time" placeholder="Descrição do seu time [ O seu time pode ser só você! ]" value="{{form.time.value}}"></textarea>
+				<textarea id="id_time" class="jsToggle" rows="10" cols="40" name="time" placeholder="Descrição do seu time [ O seu time pode ser só você! ]" value="{{form.time.value}}"></textarea>
 			</li>
 			<li>
-				<input type="text" name="nome" id="id_nome" placeholder="Nome" {%if form.nome.value %}value="{{form.nome.value}}"{%endif%} />
-				<input type="text" name="email" id="id_email" placeholder="Email" {%if form.email.value %}value="{{form.email.value}}"{%endif%} />
-				<input type="text" name="celular" id="id_celular" placeholder="Celular [ com DDD! ]" {%if form.celular.value %}value="{{form.celular.value}}"{%endif%} />
+				<input type="text" name="nome" id="id_nome" class="jsToggle" placeholder="Nome" {%if form.nome.value %}value="{{form.nome.value}}"{%endif%} />
+				<input type="text" name="email" id="id_email" class="jsToggle" placeholder="Email" {%if form.email.value %}value="{{form.email.value}}"{%endif%} />
+				<input type="text" name="celular" id="id_celular" class="jsToggle" placeholder="Celular [ com DDD! ]" {%if form.celular.value %}value="{{form.celular.value}}"{%endif%} />
 			</li>
 			<input type="submit" value="Enviar" />
 		</ul>
