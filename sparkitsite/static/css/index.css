@@ -9,6 +9,20 @@ body {
     text-align: center;
 }
 
+#camp {
+	background: none;
+	border: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 0;
+	z-index: 100;
+}
+
+#camp:hover {
+	box-shadow: none;
+}
+
 h1 {
 	color: #EEEEEE;
     font: 64px/80px 'Muli', sans-serif;
