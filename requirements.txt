@@ -11,3 +11,5 @@ django-imagekit
 -e git+https://github.com/victorfontes/django-mobile-helper.git#egg=django-mobile-helper
 
 
+
+
