@@ -1,3 +1,8 @@
+html {
+  display: inline-block;
+  width: 900px;
+  margin: 0 auto; }
+
 body {
   color: white;
   background: #191919;
@@ -18,11 +23,14 @@ body {
   /* IE6-9 */
   font-family: "DINProRegular"; }
 
+#container {
+  width: 900px;
+  margin: 0 auto; }
+
 /******************* header ******************* */
 header {
-  margin: 80px auto 0;
-  text-align: right;
-  width: 900px; }
+  margin: 80px 0 0;
+  text-align: right; }
   header #flame {
     float: left; }
   header div {
@@ -178,12 +186,11 @@ input[type="submit"] {
 
 #projects {
   display: block;
-  width: 100%;
   margin: 40px 0; }
   #projects p {
     padding: 20px 0 20px;
     text-align: center;
-    width: 100%;
+    width: 900px;
     text-shadow: 0px 3px 5px black;
     font-size: 32px; }
     #projects p span {
@@ -207,7 +214,11 @@ input[type="submit"] {
     /* IE6-9 */
     clear: both;
     border-top: 1px solid #7a7a7a;
-    border-bottom: 1px solid #161616; }
+    border-bottom: 1px solid #161616;
+    border-right: 1px solid #161616;
+    border-left: 1px solid #161616;
+    width: 900px;
+    border-radius: 20px 20px 20px 20px; }
     #projects div ul {
       margin: 20px auto;
       width: 800px;

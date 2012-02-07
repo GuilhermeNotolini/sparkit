@@ -7,7 +7,8 @@
 
 {% block 'css-extras' %}
 	{{ block.super }}
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css" media="screen" />
+	<link rel="stylesheet" href="{{STATIC_URL}}css/mobile.css" media="handheld" />
 {% endblock %}
 
 {% block 'js-extras' %}
