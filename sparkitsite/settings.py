@@ -48,6 +48,7 @@ if ON_HEROKU:
 
     AWS_STORAGE_BUCKET_NAME = 'site-sparkit'
 
+    #STATIC_ROOT = '/'
     STATIC_ROOT = ''
     STATIC_URL = 'https://s3-sa-east-1.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
@@ -59,9 +60,10 @@ if ON_HEROKU:
     EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
     EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
 
-#else:
-#    from libs.configs.env_dev import * 
-
+else:
+    STATIC_ROOT = LOCAL('static_root')
+    STATIC_URL = '/static/'
+    ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 
 
@@ -69,9 +71,7 @@ if ON_HEROKU:
 MEDIA_ROOT = LOCAL('media')
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = LOCAL('static_root')
-STATIC_URL = '/static/'
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+    
 
 STATICFILES_DIRS = (
     LOCAL('static'),
@@ -80,7 +80,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 
