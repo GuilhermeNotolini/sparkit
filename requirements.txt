@@ -1,13 +1,13 @@
 #psycopg2
 Django==1.3.1
 wsgiref==0.1.2
-django-annoying
+#django-annoying
 
 boto==2.0
 -e hg+https://bitbucket.org/tomwys/django-storages#egg=django-storages-dev
 django-imagekit
 
 -e git+http://github.com/philippWassibauer/templated-emails.git#egg=templated-emails
-
+-e git+https://github.com/victorfontes/django-mobile-helper.git#egg=django-mobile-helper
 
 
