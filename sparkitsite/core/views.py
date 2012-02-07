@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-from annoying.decorators import render_to
+from django_mobile.decorators import render_to
+
 from templated_emails.utils import send_templated_email
 from forms import SparkCampForm
 
-@render_to('index.html')
+@render_to(template='index.html', mobile_template='index.html')
 def index(request):
 	if request.POST:
 		TO_EMAIL = ['contato@sparkit.com.br']
@@ -16,7 +17,8 @@ def index(request):
 
 	return locals()
 
-@render_to('core/mobile-camp.html')
+
+@render_to(template='core/camp.html', mobile_template='core/mobile-camp.html')
 def spark_camp(request):
 	form = SparkCampForm(request.POST or None)
 	ENVIADO = False
