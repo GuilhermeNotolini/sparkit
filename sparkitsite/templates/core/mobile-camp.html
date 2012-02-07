@@ -1,0 +1,141 @@
+{% extends "util/base.html"%}
+
+{% block title %}SparkIT - da ideia à web em 1 dia - desenvolvimento de 3 produtos em 3 dias na Campus Party, de graça.{% endblock %}
+{% block description %}Você tem uma ideia e precisa de ajuda para lançá-la? Precisa acender o seu espírito empreendedor? A SparkIT fará o desenvolvimento da sua ideia durante a Campus Party, em um dia e de graça! Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!{% endblock %}
+{% block 'meta-autor' %}sparkit.com.br{% endblock %}
+{% block analytics %}UA-25096853-1{% endblock %}
+
+{% block 'css-extras' %}
+	{{ block.super }}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css" media="screen" />
+	<link rel="stylesheet" href="{{STATIC_URL}}css/mobile.css" media="handheld" />
+{% endblock %}
+
+{% block 'js-extras' %}
+	{{ block.super }}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+		try {
+			jsToggle();
+		} catch (jsToggleE){
+
+		}
+	});
+
+	function jsToggle(){    
+		if(!supports_input_placeholder()){
+			$(".jsToggle").focus(function(){
+				if($(this).val() == $(this).attr("placeholder")){
+					$(this).attr("value","");
+					$(this).css('color','');
+				}
+			}).blur(function(){
+				if($(this).val() == ""){
+					$(this).attr("value",$(this).attr("placeholder"));
+					$(this).css('color','#c3c3c3');
+				}
+			});
+
+			$(".jsToggle").each(function(){
+				if($(this).val() == ""){
+				    $(this).val($(this).attr("placeholder"));
+				    $(this).css('color','#c3c3c3');
+				}
+			});
+		}
+	}
+
+	function supports_input_placeholder() {
+	  var i = document.createElement('input');
+	  return 'placeholder' in i;
+	}
+
+	</script>
+{% endblock %}
+
+{% block 'favicon' %}
+	<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+  	<link rel="apple-touch-icon" href="{{STATIC_URL}}apple-touch-icon.png">
+ {% endblock %}
+
+{% block 'header' %}
+	<ul id="social">
+		<li>
+			<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FSparkIT%2F126036997497012&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21&amp;appId=229023540487586" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+		</li>
+		<li>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://minim.in/1qC" data-text="Quer colocar sua ideia no ar em um dia, e de graça? A @_sparkit fará isso para você na Campus Party. Inscreva-se! " data-lang="pt">Tweetar</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</li>
+		<li>
+			<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/u/0/b/110200757096749225876/"></div>
+			<script type="text/javascript">
+			 window.___gcfg = {lang: 'pt-BR'};
+
+			 (function() {
+			   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			   po.src = 'https://apis.google.com/js/plusone.js';
+			   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			 })();
+			</script>
+		</li>
+	</ul>
+	<img id="flame" src="{{ STATIC_URL}}images/spark.png" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" />
+	<div>
+		<h1><img src="{{ STATIC_URL}}images/sparkcamp.png" title="Spark Camp" alt="Spark Camp" /></h1>
+		<h2>Da ideia à web em 1 dia.</h2>
+		<h3>De graça.</h3>
+		<p>Você tem uma ideia e precisa de ajuda para lançá-la?<br/>
+		Precisa acender o seu espírito empreendedor?<br/><br/>
+		A SparkIT fará o desenvolvimento da sua ideia durante a Campus Party, em um dia e de graça!
+		</p>
+	</div>
+{% endblock %}
+
+{% block 'main' %}
+	<p id="call">Tudo o que você precisa é inscrever-se através do formulário abaixo e estar presente no maior evento tecnológico do Brasil, a Campus Party!</p>
+	{% if ENVIADO %}
+	<p class="sent red">Sua ideia foi enviada com sucesso.</p>
+	<p class="sent">Aguarde, dia 07/02 às 18:00h, anunciaremos os escolhidos.</p>
+	{% else %}
+	<form action="{% url spark_camp %}" method="post">
+		{% csrf_token %}
+		<ul>
+			<li>
+				<input id="id_nome_projeto" class="half jsToggle" type="text" name="nome_projeto" maxlength="256" {%if form.nome_projeto.value %}value="{{form.nome_projeto.value}}"{%endif%}  placeholder="Nome do projeto"/>
+				<input id="id_url_projeto" class="half jsToggle" type="text" name="url_projeto" maxlength="256" {%if form.url_projeto.value %}value="{{form.url_projeto.value}}"{%endif%} placeholder="Site do projeto [ se houver ]" />
+			</li>
+			<li>
+				<textarea id="id_desc_projeto" class="jsToggle" rows="10" cols="40" name="desc_projeto" placeholder="Descrição do produto [ O que é? O que você já fez? 'Nada' é uma resposta válida! ]" value="{{form.desc_projeto.value}}"></textarea>
+			</li>
+			<li>
+				<textarea id="id_time" class="jsToggle" rows="10" cols="40" name="time" placeholder="Descrição do seu time [ O seu time pode ser só você! ]" value="{{form.time.value}}"></textarea>
+			</li>
+			<li>
+				<input type="text" name="nome" id="id_nome" class="jsToggle" placeholder="Nome" {%if form.nome.value %}value="{{form.nome.value}}"{%endif%} />
+				<input type="text" name="email" id="id_email" class="jsToggle" placeholder="Email" {%if form.email.value %}value="{{form.email.value}}"{%endif%} />
+				<input type="text" name="celular" id="id_celular" class="jsToggle" placeholder="Celular [ com DDD! ]" {%if form.celular.value %}value="{{form.celular.value}}"{%endif%} />
+			</li>
+			<input type="submit" value="Enviar" />
+		</ul>
+	</form>
+	{% endif %}
+
+	<div id="projects">
+		<p>3 ideias desenvolvidas em 3 dias de Campus Party. <span>De graça.</span></p>
+		<div>
+			<ul>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>08/02</span></li>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>10/02</span></li>
+				<li><img src="{{ STATIC_URL}}images/produtos.png" /><span>11/02</span></li>
+			</ul>
+		</div>
+		<p>Uma dessas 3 ideias pode ser sua!</p>
+	</div>
+{% endblock %}
+
+{% block 'footer' %}
+	<a href=".."><img src="{{ STATIC_URL}}images/sparkit.png" /></a>
+{% endblock %}

@@ -1,32 +1,215 @@
 html {
-  display: none; }
+  display: inline-block;
+  width: 500px;
+  margin: 0 auto; }
 
 body {
+  color: white;
+  background: #191919;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #191919 0%, #363636 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #191919), color-stop(100%, #363636));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #191919 0%, #363636 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #191919 0%, #363636 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #191919 0%, #363636 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #191919 0%, #363636 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#191919', endColorstr='#363636',GradientType=0 );
+  /* IE6-9 */
   font-family: "DINProRegular"; }
 
 #container {
-  margin: 0 auto;
-  width: 980px; }
+  width: 500px;
+  margin: 0 auto; }
 
 /******************* header ******************* */
-header #flame {
-  float: left; }
+header {
+  margin: 40px 0 0;
+  text-align: center; }
+  header div {
+    text-shadow: 0px 3px 5px black; }
+  header p {
+    font-size: 20px; }
 
 h1 {
-  float: right; }
+  font-size: 38px; }
 
 h2 {
-  float: right;
-  text-align: right; }
+  font-size: 38px;
+  margin: 40px 0 0; }
 
 h3 {
-  font-family: "DINProMedium"; }
+  font-family: "DINProMedium";
+  color: #f01d23;
+  font-size: 50px;
+  margin: 20px 0 40px; }
 
 /******************* main ******************* */
 #main {
-  clear: both; }
+  clear: both;
+  padding: 60px 0 80px; }
+  #main #call {
+    margin: 0 auto 50px;
+    width: 500px;
+    font-size: 25px;
+    text-shadow: 0px 3px 5px black;
+    text-align: center;
+    float: none; }
+  #main .sent {
+    margin: 20px auto 80px;
+    width: 900px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 3px 5px black;
+    text-align: center; }
+  #main .red {
+    color: #f01d23;
+    margin: 80px auto 0;
+    font-size: 50px; }
+
+form {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  padding: 40px 0; }
+  form li {
+    list-style: none; }
+
+input[type="text"], input[type="email"], textarea {
+  background: #303030;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #303030 0%, #606060 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #303030), color-stop(100%, #606060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #303030 0%, #606060 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #303030 0%, #606060 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #303030 0%, #606060 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #303030 0%, #606060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#303030', endColorstr='#606060',GradientType=0 );
+  /* IE6-9 */
+  border-bottom: 1px solid #7a7a7a;
+  border-left: 1px solid #7a7a7a;
+  border-right: 1px solid #7a7a7a;
+  border-top: none;
+  border-radius: 10px 10px 10px 10px;
+  padding: 15px;
+  box-shadow: -2px -2px 0 0 #161616;
+  margin: 0 0 20px 0;
+  width: 500px;
+  font-size: 16px;
+  float: left;
+  color: white;
+  font-weight: bold; }
+
+input#id_nome_projeto {
+  margin: 0 20px 20px 0; }
+
+input#id_nome {
+  margin: 0 20px 20px 0; }
+
+input#id_email {
+  margin: 0 20px 20px 0; }
+
+textarea {
+  height: 120px; }
+
+input[type="submit"] {
+  color: white;
+  margin: 20px 40px 0;
+  width: 420px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0px 3px 5px black;
+  background: #ea1c22;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ea1c22 0%, #950a0e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea1c22), color-stop(100%, #950a0e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ea1c22 0%, #950a0e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ea1c22 0%, #950a0e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ea1c22 0%, #950a0e 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ea1c22 0%, #950a0e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EA1C22', endColorstr='#950A0E',GradientType=0 );
+  /* IE6-9 */
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  box-shadow: 0 3px 2px 1px #161616; }
+
+#projects {
+  display: block;
+  margin: 40px 0; }
+  #projects p {
+    padding: 20px 0 20px;
+    text-align: center;
+    width: 500px;
+    text-shadow: 0px 3px 5px black;
+    font-size: 32px; }
+    #projects p span {
+      color: #f01d23; }
+  #projects div {
+    background: #2c2c2c;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2c2c2c), color-stop(50%, #333333), color-stop(100%, #2c2c2c));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #2c2c2c 0%, #333333 50%, #2c2c2c 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c2c2c', endColorstr='#2c2c2c',GradientType=0 );
+    /* IE6-9 */
+    clear: both;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #161616;
+    border-right: 1px solid #161616;
+    border-left: 1px solid #161616;
+    width: 500px;
+    border-radius: 20px 20px 20px 20px; }
+    #projects div ul {
+      margin: 20px auto;
+      width: 500px;
+      lyst-style: none; }
+      #projects div ul li {
+        display: inline-block;
+        margin: 0 24px;
+        text-align: center;
+        width: 115px; }
+        #projects div ul li img {
+          margin: 0 0 10px; }
+        #projects div ul li span {
+          color: white;
+          text-shadow: 0px 3px 5px black;
+          font-size: 18px; }
 
 /******************* footer ******************* */
+footer {
+  margin: 40px auto;
+  width: 500px; }
+  footer img {
+    width: 500px; }
+
 /******************* @font-face ******************* */
 /********* DINPRO ********* */
 @font-face {
