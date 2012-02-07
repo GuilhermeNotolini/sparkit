@@ -4,6 +4,9 @@ $right-width: 550px
 $red: #F01D23
 
 html
+  display: inline-block
+  width: 900px
+  margin: 0 auto
 
 body
   color: $white
@@ -26,13 +29,14 @@ body
   font-family: 'DINProRegular'
 
 #container
+  width: 900px
+  margin: 0 auto
   
 
 /******************** header *******************
 header
-  margin: $margin * 2 auto 0
+  margin: $margin * 2 0 0
   text-align: right
-  width: 900px
   #flame
     float: left
   div
@@ -191,12 +195,11 @@ input[type="submit"]
 
 #projects
   display: block
-  width: 100%
   margin: $margin 0
   p
     padding: 20px 0 20px
     text-align: center
-    width: 100%
+    width: 900px
     text-shadow: 0px 3px 5px #000000
     font-size: 32px
     span
@@ -221,6 +224,10 @@ input[type="submit"]
     clear: both
     border-top: 1px solid #7A7A7A
     border-bottom: 1px solid #161616
+    border-right: 1px solid #161616
+    border-left: 1px solid #161616
+    width: 900px
+    border-radius: 20px 20px 20px 20px
     ul
       margin: 20px auto
       width: 800px
