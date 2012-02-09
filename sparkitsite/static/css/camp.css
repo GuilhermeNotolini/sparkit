@@ -235,13 +235,18 @@ input[type="submit"] {
           text-shadow: 0px 3px 5px black;
           font-size: 18px; }
   #projects h4 {
-    padding: 20px 0 20px;
+    padding: 20px 0 0;
     text-align: center;
     width: 900px;
     text-shadow: 0px 3px 5px black;
-    font-size: 32px; }
+    font-size: 25px; }
     #projects h4 span {
       color: #f01d23; }
+  #projects .done {
+    border-radius: 10px 10px 10px 10px;
+    margin: 20px 200px; }
+  #projects .done:hover {
+    box-shadow: 0px 0px 5px 3px #a9a9a9; }
 
 /******************* footer ******************* */
 footer {
