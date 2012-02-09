@@ -49,6 +49,9 @@ h3 {
   font-size: 50px;
   margin: 20px 0 40px; }
 
+ul {
+  padding: 0; }
+
 /******************* main ******************* */
 #main {
   clear: both;
@@ -202,6 +205,18 @@ input[type="submit"] {
           color: white;
           text-shadow: 0px 3px 5px black;
           font-size: 18px; }
+  #projects h4 {
+    padding: 20px 0 0;
+    text-align: center;
+    width: 500px;
+    text-shadow: 0px 3px 5px black;
+    font-size: 25px; }
+    #projects h4 span {
+      color: #f01d23; }
+  #projects .done {
+    border-radius: 10px 10px 10px 10px; }
+  #projects .done:hover {
+    box-shadow: 0px 0px 5px 3px #a9a9a9; }
 
 /******************* footer ******************* */
 footer {
