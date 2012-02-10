@@ -1,0 +1,65 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+	html {
+		background: #000000 url('../images/bg.jpg');
+	}
+
+	body {
+		background: url('../images/faixa-amarela.png') repeat-x;
+	}
+
+	header, footer {
+		text-align: center;
+		margin: 0 0 30px;
+	}
+
+	h2, article {
+		color: #FFFFFF;
+		font-size: 40px;
+		font-weight: normal;
+		text-shadow: 3px 3px 6px #000000;
+	}
+
+	article {
+		font-size: 15px;
+		margin: 0 0 30px;
+	}
+
+	.ninecol, .twocol {
+		background: yellow; /* DEBUG */
+		height: 400px;
+		margin: 0 0 30px;
+	}
+
+	.twocol {
+		background: green; /* DEBUG */
+	}
+	
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
