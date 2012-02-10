@@ -28,13 +28,16 @@
 	}
 
 	.ninecol, .twocol {
-		background: yellow; /* DEBUG */
 		height: 400px;
 		margin: 0 0 30px;
 	}
 
-	.twocol {
-		background: green; /* DEBUG */
+	ul {
+		list-style: none;
+	}
+
+	li {
+		margin: 0 0 50px;
 	}
 	
 
