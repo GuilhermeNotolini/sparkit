@@ -7,8 +7,7 @@
 
 {% block 'css-extras' %}
 	{{ block.super }}
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/camp.css" media="screen" />
-	<link rel="stylesheet" href="{{STATIC_URL}}css/mobile.css" media="handheld" />
+	<link rel="stylesheet" href="{{STATIC_URL}}css/mobile.css" />
 {% endblock %}
 
 {% block 'js-extras' %}
@@ -61,28 +60,6 @@
  {% endblock %}
 
 {% block 'header' %}
-	<ul id="social">
-		<li>
-			<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FSparkIT%2F126036997497012&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21&amp;appId=229023540487586" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
-		</li>
-		<li>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://minim.in/1qC" data-text="Quer colocar sua ideia no ar em um dia, e de graça? A @_sparkit fará isso para você na Campus Party. Inscreva-se! " data-lang="pt">Tweetar</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</li>
-		<li>
-			<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/u/0/b/110200757096749225876/"></div>
-			<script type="text/javascript">
-			 window.___gcfg = {lang: 'pt-BR'};
-
-			 (function() {
-			   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			   po.src = 'https://apis.google.com/js/plusone.js';
-			   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			 })();
-			</script>
-		</li>
-	</ul>
-	<img id="flame" src="{{ STATIC_URL}}images/spark.png" title="SparkIT - web and mobile apps" alt="SparkIT - web and mobile apps" />
 	<div>
 		<h1><img src="{{ STATIC_URL}}images/sparkcamp.png" title="Spark Camp" alt="Spark Camp" /></h1>
 		<h2>Da ideia à web em 1 dia.</h2>
@@ -135,7 +112,7 @@
 		<p>Uma dessas 3 ideias pode ser sua!</p>
 
 		<h4><span>1° projeto</span> - dia 08/02 - Fuel Control</h4>
-		<a href="http://fuelcontrol.herokuapp.com"><img class="done" src="{{ STATIC_URL}}images/projects/fuel-control.png" /></a>
+		<a href="http://fuelcontrol.herokuapp.com"><img class="done" src="{{ STATIC_URL}}images/projects/fuel-control.png" />
 	</div>
 {% endblock %}
 

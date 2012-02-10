@@ -1,6 +1,6 @@
 html {
   display: inline-block;
-  width: 900px;
+  width: 500px;
   margin: 0 auto; }
 
 body {
@@ -24,53 +24,33 @@ body {
   font-family: "DINProRegular"; }
 
 #container {
-  width: 900px;
+  width: 500px;
   margin: 0 auto; }
 
 /******************* header ******************* */
 header {
-  margin: 80px 0 0;
-  text-align: right; }
-  header #flame {
-    float: left; }
+  margin: 40px 0 0;
+  text-align: center; }
   header div {
-    width: 550px;
-    float: right;
     text-shadow: 0px 3px 5px black; }
   header p {
-    float: right;
-    width: 490px;
     font-size: 20px; }
-  header #social {
-    background: url("../images/social.png");
-    position: absolute;
-    top: 0;
-    right: 15%;
-    width: 360px;
-    height: 41px;
-    display: inline-block; }
-    header #social li {
-      display: inline-block;
-      padding: 8px 0 0; }
 
 h1 {
-  float: right;
-  width: 550px;
   font-size: 38px; }
 
 h2 {
-  float: right;
-  width: 550px;
   font-size: 38px;
   margin: 40px 0 0; }
 
 h3 {
   font-family: "DINProMedium";
-  float: right;
-  width: 550px;
   color: #f01d23;
   font-size: 50px;
   margin: 20px 0 40px; }
+
+ul {
+  padding: 0; }
 
 /******************* main ******************* */
 #main {
@@ -78,7 +58,7 @@ h3 {
   padding: 60px 0 80px; }
   #main #call {
     margin: 0 auto 50px;
-    width: 800px;
+    width: 500px;
     font-size: 25px;
     text-shadow: 0px 3px 5px black;
     text-align: center;
@@ -98,7 +78,7 @@ h3 {
 form {
   display: block;
   margin: 0 auto;
-  width: 730px;
+  width: 500px;
   padding: 40px 0; }
   form li {
     list-style: none; }
@@ -128,37 +108,28 @@ input[type="text"], input[type="email"], textarea {
   padding: 15px;
   box-shadow: -2px -2px 0 0 #161616;
   margin: 0 0 20px 0;
-  width: 700px;
+  width: 500px;
   font-size: 16px;
   float: left;
   color: white;
   font-weight: bold; }
 
 input#id_nome_projeto {
-  width: 325px;
-  margin: 0 20px 0 0; }
-
-input#id_url_projeto {
-  width: 320px; }
+  margin: 0 20px 20px 0; }
 
 input#id_nome {
-  width: 198px;
-  margin: 0 20px 0 0; }
+  margin: 0 20px 20px 0; }
 
 input#id_email {
-  width: 198px;
-  margin: 0 20px 0 0; }
-
-input#id_celular {
-  width: 198px; }
+  margin: 0 20px 20px 0; }
 
 textarea {
   height: 120px; }
 
 input[type="submit"] {
   color: white;
-  margin: 20px 147px 0;
-  width: 436px;
+  margin: 20px 40px 0;
+  width: 420px;
   height: 90px;
   line-height: 90px;
   text-align: center;
@@ -190,7 +161,7 @@ input[type="submit"] {
   #projects p {
     padding: 20px 0 20px;
     text-align: center;
-    width: 900px;
+    width: 500px;
     text-shadow: 0px 3px 5px black;
     font-size: 32px; }
     #projects p span {
@@ -217,15 +188,15 @@ input[type="submit"] {
     border-bottom: 1px solid #161616;
     border-right: 1px solid #161616;
     border-left: 1px solid #161616;
-    width: 900px;
+    width: 500px;
     border-radius: 20px 20px 20px 20px; }
     #projects div ul {
       margin: 20px auto;
-      width: 800px;
+      width: 500px;
       lyst-style: none; }
       #projects div ul li {
         display: inline-block;
-        margin: 0 74px;
+        margin: 0 24px;
         text-align: center;
         width: 115px; }
         #projects div ul li img {
@@ -237,21 +208,22 @@ input[type="submit"] {
   #projects h4 {
     padding: 20px 0 0;
     text-align: center;
-    width: 900px;
+    width: 500px;
     text-shadow: 0px 3px 5px black;
     font-size: 25px; }
     #projects h4 span {
       color: #f01d23; }
   #projects .done {
-    border-radius: 10px 10px 10px 10px;
-    margin: 20px 200px; }
+    border-radius: 10px 10px 10px 10px; }
   #projects .done:hover {
     box-shadow: 0px 0px 5px 3px #a9a9a9; }
 
 /******************* footer ******************* */
 footer {
   margin: 40px auto;
-  width: 622px; }
+  width: 500px; }
+  footer img {
+    width: 500px; }
 
 /******************* @font-face ******************* */
 /********* DINPRO ********* */
