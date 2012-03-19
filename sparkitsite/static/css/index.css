@@ -255,14 +255,6 @@ section {
 	background: url("https://s3-sa-east-1.amazonaws.com/site-sparkit/images/people/victor.jpg") -320px 0 no-repeat;
 }
 
-#people #arruda {
-	background: url("https://s3-sa-east-1.amazonaws.com/site-sparkit/images/people/arruda.jpg") -320px 0 no-repeat;
-}
-
-#people #arlindo {
-	background: url("https://s3-sa-east-1.amazonaws.com/site-sparkit/images/people/arlindo.jpg") -320px 0 no-repeat;
-}
-
 #people a:hover div {
 	background-position: 0 0 !important;
 }
