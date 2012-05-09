@@ -1,72 +1,305 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>SparkIT - web e mobile apps</title>
-    <meta name="description" content="SparkIT - Desenvolvimento web e mobile apps em tempo recorde!">
+        <title>#FIXME</title>
+        <meta name="description" content="#FIXME">
 
-    <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/estilo.css">
-  	<link rel="stylesheet" href="img/fonts/stylesheet.css">
-  
-  	<link rel="shortcut icon" href="favicon.ico">
-  	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-  
-    <script src="js/libs/modernizr-2.5.3.min.js"></script>
+        <link rel="stylesheet" href="static/stylesheets/screen.css">
+      
+      	<link rel="shortcut icon" href="static/images/favicon.ico">
+      	<link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Chivo:400,900' rel='stylesheet' type='text/css'>
+
+        <!-- gallery -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>  
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script> 
+        <link rel="stylesheet" href="static/stylesheets/gallery.css">
+        <script> 
+        $(document).ready(function(){  
+            $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 20000, true);  
+        });  
+        </script>        
     </head>
     <body>
         <header>
-            <img src="img/logo-sparkit.png" alt="SparkIT - web e mobile apps">
-        </header>
-       
-       
-        <div role="main" class="content">
-            <img class="line" src="img/line.png">
-            
-            <h1>desenvolvemos
-                <span class="call-2">web e mobile apps</span>
-                <span class="call-3">em <span>1</span> semana</span>
-            </h1>
-               
-            <div class="balao">
-                <a href="mailto:contato@sparkit.com.br" target="_blank">contato@sparkit.com.br</a>
+            <div>
+                <img src="static/images/sparkit-small.png">
+                <nav>
+                    <li><a class="anchorScroll" href="#FIXME">SOBRE</a></li>
+                    <li><a class="anchorScroll" href="#FIXME">SERVIÇOS</a></li>
+                    <li><a class="anchorScroll" href="#FIXME">PORTFOLIO</a></li>
+                    <li><a class="anchorScroll" href="#FIXME">BLOG</a></li>
+                    <li><a class="anchorScroll" href="#FIXME">CONTATO</a></li>
+                </nav>
             </div>
+        </header>
+        <div role="main" id="content">
+            <section>
+                <div class="centered sparkit">
+                    <h1>SparkIT</h1>
+                    <img src="static/images/devices.png"/>
+                    <h2>Desenvolvemos aplicativos web e mobile fora de série!</h2>
+                    <h3>A SparkIT tem a solução ideal para desenvolver a sua ideia, seja ela qual for.</h3>
+                </div>
+            </section>
+            
+            <section class="dark-bg about">
+                <div class="centered">
+                    <h3>Sobre</h3>
+                    <p>A SparkIT é uma empresa de tecnologia, especializada em desenvolver e oferecer ferramentas e soluções inovadoras que gerem intereções entre pessoas, produtos e negócios. Acreditamos no foco no negócio, na tecnologia e na inovação como geradores de resultados, sejam eles de relacionamento, comunicação, branding ou estratégicos e comerciais.</p>
+                    <p><strong>Nosso segredo</strong></p>
+                    <p>É bem simples. Uma metodologia de trabalho bem orquestrada:</p>
+                    <ul>
+                        <li>
+                            <span><img src="static/images/estrategia.png"/></span>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick rump speck. Shoulder cow meatball, capicola pork belly shankle pork loin tri-tip bacon ham meatloaf boudin salami sirloin pork. Pastrami chuck corned beef kielbasa, sirloin pork chop tail bresaola. Ground round flank boudin tri-tip leberkas, pork belly filet mignon rump pork loin tongue. Spare ribs fatback meatball rump, pig t-bone biltong ground round.</p>
+                        </li>
+                        <li class="img">
+                            <img src="static/images/sparkit-outline.png"/>
+                        </li>
+                        <li>
+                           <span><img src="static/images/design.png"/></span>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick rump speck. Shoulder cow meatball, capicola pork belly shankle pork loin tri-tip bacon ham meatloaf boudin salami sirloin pork. Pastrami chuck corned beef kielbasa, sirloin pork chop tail bresaola. Ground round flank boudin tri-tip leberkas, pork belly filet mignon rump pork loin tongue. Spare ribs fatback meatball rump, pig t-bone biltong ground round.</p>
+                        </li>
+                        <li class="img">
+                            <img src="static/images/sparkit-outline.png"/>
+                        </li>
+                        <li>
+                            <span><img src="static/images/desenvolvimento.png"/></span>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick rump speck. Shoulder cow meatball, capicola pork belly shankle pork loin tri-tip bacon ham meatloaf boudin salami sirloin pork. Pastrami chuck corned beef kielbasa, sirloin pork chop tail bresaola. Ground round flank boudin tri-tip leberkas, pork belly filet mignon rump pork loin tongue. Spare ribs fatback meatball rump, pig t-bone biltong ground round.</p>
+                        </li>
+                        <li class="img">
+                            <img src="static/images/sparkit-outline.png"/>
+                        </li>
+                        <li>
+                            <span><img src="static/images/spark-it.png"/></span>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick rump speck. Shoulder cow meatball, capicola pork belly shankle pork loin tri-tip bacon ham meatloaf boudin salami sirloin pork. Pastrami chuck corned beef kielbasa, sirloin pork chop tail bresaola. Ground round flank boudin tri-tip leberkas, pork belly filet mignon rump pork loin tongue. Spare ribs fatback meatball rump, pig t-bone biltong ground round.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section>
+                <div class="centered services">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li>
+                            <span><img src="static/images/badges/ecommerce.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick </p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/corporativo.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/mobile.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/pessoal.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/hotsite.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/bancodedados.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/game.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/blog.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                        <li>
+                            <span><img src="static/images/badges/inovar.png"/></span>
+                            <h4>Bancos de Dados</h4>
+                            <p>Bacon ipsum dolor sit amet swine shoulder leberkas fatback, bacon drumstick</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="light-bg portfolio">
+                <div class="centered">
+                    <h3>Portfolio</h3>
+                    <div id="featured" >  
+                        <ul class="ui-tabs-nav">  
+                            <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1">
+                                <a href="#fragment-1">
+                                    <img src="static/images/portfolio/ecereal_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li class="ui-tabs-nav-item" id="nav-fragment-2">
+                                <a href="#fragment-2">
+                                    <img src="static/images/portfolio/geeksonbeer_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li class="ui-tabs-nav-item" id="nav-fragment-3">
+                                <a href="#fragment-3">
+                                    <img src="static/images/portfolio/mochilao_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li class="ui-tabs-nav-item" id="nav-fragment-4">
+                                <a href="#fragment-4">
+                                    <img src="static/images/portfolio/multiplosolhares_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li class="ui-tabs-nav-item" id="nav-fragment-4">
+                                <a href="#fragment-5">
+                                    <img src="static/images/portfolio/provaessa_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                            <li class="ui-tabs-nav-item" id="nav-fragment-4">
+                                <a href="#fragment-6">
+                                    <img src="static/images/portfolio/takeme_thumb.jpg" alt="" />
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- First Content -->  
+                        <div id="fragment-1" class="ui-tabs-panel" style="">  
+                            <img src="static/images/portfolio/ecereal.jpg" alt="" />
+                            <div class="info" >  
+                            <h2><a href="#" >e-Cereal</a></h2>  
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt condimentum lacus. Pellentesque ut diam....</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt condimentum lacus. Pellentesque ut diam....</p>
+                            </div>  
+                        </div>  
+                        <!-- Second Content -->  
+                        <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">  
+                            <img src="static/images/portfolio/geeksonbeer.jpg" alt="" />
+                            <div class="info" >  
+                            <h2><a href="#" >Geeks On Beer</a></h2>  
+                            <p>Vestibulum leo quam, accumsan nec porttitor a, euismod ac tortor. Sed ipsum lorem, sagittis non egestas id, suscipit....</p>
+                            <p>Vestibulum leo quam, accumsan nec porttitor a, euismod ac tortor. Sed ipsum lorem, sagittis non egestas id, suscipit....</p>
+                            </div>  
+                        </div>  
+                        <!-- Third Content -->  
+                        <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">  
+                            <img src="static/images/portfolio/mochilao.jpg" alt="" />
+                            <div class="info" >  
+                            <h2><a href="#" >Guia do Mochilão</a></h2>  
+                            <p>liquam erat volutpat. Proin id volutpat nisi. Nulla facilisi. Curabitur facilisis sollicitudin ornare....</p>
+                            <p>liquam erat volutpat. Proin id volutpat nisi. Nulla facilisi. Curabitur facilisis sollicitudin ornare....</p>
+                            </div>  
+                        </div>  
+                        <!-- Fourth Content -->  
+                        <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">  
+                            <img src="static/images/portfolio/multiplosolhares.jpg" alt="" />
+                            <div class="info" >  
+                            <h2><a href="#" >Multiplos Olhares</a></h2>  
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            </div>  
+                        </div>
+                        <!-- Fifth Content -->  
+                        <div id="fragment-5" class="ui-tabs-panel ui-tabs-hide" style="">  
+                            <img src="static/images/portfolio/provaessa.jpg" alt="" /> 
+                            <div class="info" >  
+                            <h2><a href="#" >Prova Essa</a></h2>  
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            </div>  
+                        </div>
+                        <!-- Sixth Content -->  
+                        <div id="fragment-6" class="ui-tabs-panel ui-tabs-hide" style="">  
+                            <img src="static/images/portfolio/takeme.jpg" alt="" />
+                            <div class="info" >  
+                            <h2><a href="#" >Take Me</a></h2>  
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            <p>Quisque sed orci ut lacus viverra interdum ornare sed est. Donec porta, erat eu pretium luctus, leo augue sodales....</p>
+                            </div>  
+                        </div>
+                        <hr></hr>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- <section>
+                <div class="centered">
+                    blog
+                </div>
+            </section> -->
 
-            <img class="devices" src="img/suportes.png">
-    
-            <img class="line" src="img/line.png">
-   
+            <footer class="dark-bg">
+                <div class="centered">
+                    <h3>Contato</h3>
+                    <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://sparkitbr.wufoo.com/forms/z7x3x5/#public">
+                    <ul>
+                        <li id="foli1" class="notranslate      ">
+                            <label class="desc" id="title1" for="Field1">
+                                Nome<span id="req_1" class="req">*</span>
+                            </label>
+                            <div>
+                                <input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
+                            </div>
+                        </li>
+                        <li id="foli2" class="notranslate      ">
+                            <label class="desc" id="title2" for="Field2">
+                                Email<span id="req_2" class="req">*</span>
+                            </label>
+                            <div>
+                                <input id="Field2" name="Field2" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" required /> 
+                            </div>
+                        </li>
+                        <li id="foli3" class="notranslate">
+                            <label class="desc" id="title3" for="Field3">
+                                Mensagem<span id="req_3" class="req">*</span>
+                            </label>
+                            <div>
+                                <textarea id="Field3" name="Field3" class="field textarea medium" spellcheck="true" rows="10" cols="50" tabindex="3" onkeyup="" required  ></textarea>
+                            </div>
+                        </li> 
+                        <li class="buttons ">
+                            <div>
+                                <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Enviar" />
+                            </div>
+                        </li>
 
-	       <p> novo site no ar muito em breve! </p>
-    
-			<ul>
-				<li id="facebook" title="Facebook">
-                    <a href="https://www.facebook.com/pages/SparkIT/126036997497012" target="_blank" alt="Página do Facebook da SparkIT"></a>
-                </li>
-				<li id="twitter" title="Twitter">
-                    <a href="http://twitter.com/_sparkit" target="_blank" alt="Conta do Twitter da SparkIT"></a>
-                </li>
-               	<li id="plus" title="Google+">
-                    <a href="https://plus.google.com/u/0/110200757096749225876/posts" target="_blank" alt="Página do Google+ da SparkIT"></a>
-                </li>
-			</ul>
+                        <li class="hide">
+                            <label for="comment">Do Not Fill This Out</label>
+                            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                            <input type="hidden" id="idstamp" name="idstamp" value="5V5yyrkCP0+yWmIN/cAQ7QEXEl5fDIEBFHxVe4/zOVw=" />
+                        </li>
+                    </ul>
+                    </form> 
+                    <div class="social">
+                        <div class="beer">
+                            <img src="static/images/beer.png" alt="" />
+                            <p>Estamos no Centro do Rio de Janeiro e toda sexta-feira nos reunimos para tomar um chopp.</p>
+                            <p><strong>Junte-se a nós!</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         
-        <footer>
-            <img src="img/spark-footer.png">
-        </footer>
 
 
     <script>
-    	var _gaq=[['_setAccount','UA-25096853-1'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+    	var _gaq=[['_setAccount','UA-25096853-1'],['_trackPageview']];
     	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     	s.parentNode.insertBefore(g,s)}(document,'script'));
