@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 16, ../sass/screen.sass */
 .centered {
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 80px 0;
   width: 980px;
 }
 
@@ -141,13 +141,18 @@ header div nav li a {
   color: #ebebeb;
 }
 
-/* line 65, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
+section {
+  width: 100%;
+}
+
+/* line 67, ../sass/screen.sass */
 .sparkit {
   text-align: center;
   font-weight: bold;
-  margin-top: 40px;
+  padding-top: 80px;
 }
-/* line 69, ../sass/screen.sass */
+/* line 71, ../sass/screen.sass */
 .sparkit h1 {
   background: url(../images/sparkit-logo.png);
   height: 100px;
@@ -155,77 +160,77 @@ header div nav li a {
   text-indent: -9999px;
   width: 510px;
 }
-/* line 75, ../sass/screen.sass */
+/* line 77, ../sass/screen.sass */
 .sparkit h2 {
   color: #393939;
   font-size: 36px;
   margin: 40px 0 25px;
 }
-/* line 79, ../sass/screen.sass */
+/* line 81, ../sass/screen.sass */
 .sparkit h3 {
   color: #ff1d1f;
   font-size: 22px;
 }
 
-/* line 83, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 .about {
   color: #ebebeb;
 }
-/* line 85, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 .about h3 {
   font-weight: bold;
   font-size: 30px;
   margin: 0 0 30px;
 }
-/* line 89, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 .about p {
   margin: 0 0 20px;
 }
-/* line 91, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 .about ul {
   display: inline-block;
   padding: 20px 0 0;
 }
-/* line 94, ../sass/screen.sass */
+/* line 96, ../sass/screen.sass */
 .about ul li {
   float: left;
   text-align: center;
   width: 210px;
 }
-/* line 98, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 .about ul li span {
   display: block;
   height: 255px;
   margin: 0 0 30px;
 }
-/* line 102, ../sass/screen.sass */
+/* line 104, ../sass/screen.sass */
 .about ul li p {
   text-align: left;
 }
-/* line 105, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 .about ul li.img {
   margin: 70px 7px 0;
   width: 32px;
 }
 
-/* line 110, ../sass/screen.sass */
+/* line 112, ../sass/screen.sass */
 .services h3 {
   color: #393939;
   font-weight: bold;
   font-size: 30px;
   margin: 0 0 20px;
 }
-/* line 115, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 .services ul {
   display: inline-block;
 }
-/* line 117, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 .services li {
   float: left;
   width: 300px;
   margin: 20px 13px;
 }
-/* line 121, ../sass/screen.sass */
+/* line 123, ../sass/screen.sass */
 .services li span {
   display: block;
   height: 70px;
@@ -235,20 +240,20 @@ header div nav li a {
   text-align: center;
   margin: 0 20px 0 0;
 }
-/* line 129, ../sass/screen.sass */
+/* line 131, ../sass/screen.sass */
 .services li h4 {
   color: #ff1d1f;
   font-weight: bold;
   margin: 0 0 10px;
   letter-spacing: 0.8px;
 }
-/* line 134, ../sass/screen.sass */
+/* line 136, ../sass/screen.sass */
 .services li p {
   height: 70px;
   text-align: left;
 }
 
-/* line 139, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 .portfolio h3 {
   color: #393939;
   font-weight: bold;
@@ -257,21 +262,13 @@ header div nav li a {
   text-shadow: 1px 0 0px white;
 }
 
-/* line 146, ../sass/screen.sass */
-footer {
-  height: 570px;
-}
-/* line 148, ../sass/screen.sass */
+/* line 149, ../sass/screen.sass */
 footer h3 {
   color: #ebebeb;
   font-weight: bold;
   font-size: 30px;
   margin: 0 0 20px;
   text-shadow: 1px 0 0px white;
-}
-/* line 154, ../sass/screen.sass */
-footer form {
-  float: left;
 }
 /* line 156, ../sass/screen.sass */
 footer form li {

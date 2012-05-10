@@ -28,22 +28,26 @@
         $(document).ready(function(){  
             $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 20000, true);  
         });  
-        </script>        
+        </script>
+
+        <!-- anchor -->
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+        <script type="text/javascript" src="static/js/jquery.anchor.js"></script>
     </head>
     <body>
         <header>
             <div>
-                <img src="static/images/sparkit-small.png">
+                <a class="anchorLink" href=".home"><img src="static/images/sparkit-small.png"></a>
                 <nav>
-                    <li><a class="anchorScroll" href="#FIXME">SOBRE</a></li>
-                    <li><a class="anchorScroll" href="#FIXME">SERVIÇOS</a></li>
-                    <li><a class="anchorScroll" href="#FIXME">PORTFOLIO</a></li>
-                    <li><a class="anchorScroll" href="#FIXME">BLOG</a></li>
-                    <li><a class="anchorScroll" href="#FIXME">CONTATO</a></li>
+                    <li><a class="anchorLink" href=".about">SOBRE</a></li>
+                    <li><a class="anchorLink" href=".services">SERVIÇOS</a></li>
+                    <li><a class="anchorLink" href=".portfolio">PORTFOLIO</a></li>
+                    <!-- <li><a class="anchorLink" href=".blog">BLOG</a></li> -->
+                    <li><a class="anchorLink" href=".contact">CONTATO</a></li>
                 </nav>
             </div>
         </header>
-        <div role="main" id="content">
+        <div role="main" class="home">
             <section>
                 <div class="centered sparkit">
                     <h1>SparkIT</h1>
@@ -237,54 +241,15 @@
                 </div>
             </section>
             
-            <!-- <section>
+            <!-- <section class="blog">
                 <div class="centered">
                     blog
                 </div>
             </section> -->
 
-            <footer class="dark-bg">
+            <footer class="dark-bg contact">
                 <div class="centered">
                     <h3>Contato</h3>
-                    <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://sparkitbr.wufoo.com/forms/z7x3x5/#public">
-                    <ul>
-                        <li id="foli1" class="notranslate      ">
-                            <label class="desc" id="title1" for="Field1">
-                                Nome<span id="req_1" class="req">*</span>
-                            </label>
-                            <div>
-                                <input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
-                            </div>
-                        </li>
-                        <li id="foli2" class="notranslate      ">
-                            <label class="desc" id="title2" for="Field2">
-                                Email<span id="req_2" class="req">*</span>
-                            </label>
-                            <div>
-                                <input id="Field2" name="Field2" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" required /> 
-                            </div>
-                        </li>
-                        <li id="foli3" class="notranslate">
-                            <label class="desc" id="title3" for="Field3">
-                                Mensagem<span id="req_3" class="req">*</span>
-                            </label>
-                            <div>
-                                <textarea id="Field3" name="Field3" class="field textarea medium" spellcheck="true" rows="10" cols="50" tabindex="3" onkeyup="" required  ></textarea>
-                            </div>
-                        </li> 
-                        <li class="buttons ">
-                            <div>
-                                <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Enviar" />
-                            </div>
-                        </li>
-
-                        <li class="hide">
-                            <label for="comment">Do Not Fill This Out</label>
-                            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                            <input type="hidden" id="idstamp" name="idstamp" value="5V5yyrkCP0+yWmIN/cAQ7QEXEl5fDIEBFHxVe4/zOVw=" />
-                        </li>
-                    </ul>
-                    </form> 
                     <div class="social">
                         <div class="beer">
                             <img src="static/images/beer.png" alt="" />
@@ -292,6 +257,45 @@
                             <p><strong>Junte-se a nós!</strong></p>
                         </div>
                     </div>
+                    <form id="form1" name="form1" class="wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://sparkitbr.wufoo.com/forms/z7x3x5/#public">
+                        <ul>
+                            <li id="foli1" class="notranslate      ">
+                                <label class="desc" id="title1" for="Field1">
+                                    Nome<span id="req_1" class="req">*</span>
+                                </label>
+                                <div>
+                                    <input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
+                                </div>
+                            </li>
+                            <li id="foli2" class="notranslate      ">
+                                <label class="desc" id="title2" for="Field2">
+                                    Email<span id="req_2" class="req">*</span>
+                                </label>
+                                <div>
+                                    <input id="Field2" name="Field2" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" required /> 
+                                </div>
+                            </li>
+                            <li id="foli3" class="notranslate">
+                                <label class="desc" id="title3" for="Field3">
+                                    Mensagem<span id="req_3" class="req">*</span>
+                                </label>
+                                <div>
+                                    <textarea id="Field3" name="Field3" class="field textarea medium" spellcheck="true" rows="10" cols="50" tabindex="3" onkeyup="" required  ></textarea>
+                                </div>
+                            </li> 
+                            <li class="buttons ">
+                                <div>
+                                    <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Enviar" />
+                                </div>
+                            </li>
+
+                            <li class="hide">
+                                <label for="comment">Do Not Fill This Out</label>
+                                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                                <input type="hidden" id="idstamp" name="idstamp" value="5V5yyrkCP0+yWmIN/cAQ7QEXEl5fDIEBFHxVe4/zOVw=" />
+                            </li>
+                        </ul>
+                    </form>
                 </div>
             </footer>
         </div>
