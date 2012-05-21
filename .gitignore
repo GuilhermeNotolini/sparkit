@@ -3,3 +3,5 @@
 *.DS_Store
 sparkitsite/static_root/
 .sass-cache/
+
+sparkitsite/static/css/.sass-cache/**/*
