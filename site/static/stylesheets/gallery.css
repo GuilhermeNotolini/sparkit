@@ -1,7 +1,7 @@
 #featured{  
     width:980px;  
     position:relative;
-    height: 585px;
+    height: 595px;
 }  
 
 #featured ul.ui-tabs-nav{  
@@ -14,7 +14,7 @@
 
 #featured ul.ui-tabs-nav li{  
     padding: 1px 0;
-    margin-left: 12px;
+    margin-left: 18px;
     font-size: 12px;
     float: left;
 }
@@ -49,7 +49,7 @@
 
 #featured ul.ui-tabs-nav li img{  
     float:left;
-    width: 153px;
+    width: 180px;
 }
 
 #featured .ui-tabs-panel .info{  
