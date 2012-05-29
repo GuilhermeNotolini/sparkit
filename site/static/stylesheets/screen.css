@@ -156,7 +156,7 @@ section {
 .sparkit h1 {
   background: url(../images/sparkit-logo.png);
   height: 110px;
-  margin: 0 auto 10px;
+  margin: 10px auto;
   text-indent: -9999px;
   width: 510px;
 }
@@ -238,7 +238,7 @@ section {
   width: 60px;
   float: left;
   text-align: center;
-  margin: 0 20px 0 0;
+  margin: 10px 20px 10px 0;
 }
 /* line 131, ../sass/screen.sass */
 .services li h4 {
@@ -342,6 +342,11 @@ footer .social .beer p {
 }
 
 /* line 197, ../sass/screen.sass */
+.fb_iframe_widget {
+  background: white;
+}
+
+/* line 200, ../sass/screen.sass */
 .fb {
   display: inline-block;
   margin: 40px 40px 0 0;
